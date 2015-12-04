@@ -11,12 +11,14 @@
 
 首先编辑
 
-```vim /etc/sysconfig/network-scripts/ifcfg-eth0
+```bash
+vim /etc/sysconfig/network-scripts/ifcfg-eth0
 ```
 
 设置DNS1为127.0.0.1，即指向dnsmasq
 
-```...
+```
+...
 DNS1=127.0.0.1
 ...
 ```
@@ -25,7 +27,8 @@ DNS1=127.0.0.1
 
 编辑/etc/hosts加入以下内容
 
-```2607:f8b0:4005:801::200e google.com
+```
+2607:f8b0:4005:801::200e google.com
 2607:f8b0:4005:801::200e www.google.com
 2607:f8b0:4007:805::100f scholar.google.cn
 2607:f8b0:4007:805::100f scholar.google.com
@@ -35,7 +38,8 @@ DNS1=127.0.0.1
 
 启动dnsmasq
 
-```systemctl enable dnsmasq
+```bash
+systemctl enable dnsmasq
 systemctl start dnsmasq
 ```
 
