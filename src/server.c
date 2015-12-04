@@ -838,7 +838,17 @@ static void server_resolve_cb(struct sockaddr *addr, void *data)
         close_and_free_server(EV_A_ server);
     } else {
         if (verbose) {
-            LOGI("udns resolved");
+            char str[INET6_ADDRSTRLEN];
+            if (addr->sa_family == AF_INET) {
+                struct sockaddr_in *s = (struct sockaddr_in *)addr;
+                int ipAddr = s->sin_addr.s_addr;
+                inet_ntop( AF_INET, &ipAddr, str, INET_ADDRSTRLEN );
+            } else if (addr->sa_family == AF_INET6) {
+                struct sockaddr_in6 *s = (struct sockaddr_in6 *)addr;
+                struct in6_addr ipAddr = s->sin6_addr;
+                inet_ntop( AF_INET6, &ipAddr, str, INET6_ADDRSTRLEN );
+            }
+            LOGI("udns resolved: %s", str);
         }
 
         struct addrinfo info;
