@@ -42,6 +42,19 @@ DNS1=127.0.0.1
 systemctl enable dnsmasq
 systemctl start dnsmasq
 ```
+### 让shadowsocks-libev同时监听IPv4/IPv6
+
+编辑/etc/shadowsocks-libev/config.json
+
+```bash
+vim /etc/shadowsocks-libev/config.json
+```
+
+把server的设置改成：
+
+```
+"server":["[::0]", "0.0.0.0"],
+```
 
 ## Intro
 
