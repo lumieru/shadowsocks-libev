@@ -1,5 +1,44 @@
 # shadowsocks-libev
 
+## DigitalOcean上 IPv6优先的设置
+
+首先要开通vps的IPv6支持，参考[DigitalOcean IPv6](https://www.digitalocean.com/community/tutorials/how-to-enable-ipv6-for-digitalocean-droplets)
+
+因为shadowsocks-libev不会读取/etc/hosts里面的设置，所以要自己架设DNS Server来解析某些地址。
+这里用dnsmasq来处理。
+
+### dnsmasq的设置
+
+首先编辑
+
+```vim /etc/sysconfig/network-scripts/ifcfg-eth0
+```
+
+设置DNS1为127.0.0.1，即指向dnsmasq
+
+```...
+DNS1=127.0.0.1
+...
+```
+
+然后重启vps服务器
+
+编辑/etc/hosts加入以下内容
+
+```2607:f8b0:4005:801::200e google.com
+2607:f8b0:4005:801::200e www.google.com
+2607:f8b0:4007:805::100f scholar.google.cn
+2607:f8b0:4007:805::100f scholar.google.com
+2607:f8b0:4007:805::100f scholar.google.com.hk
+2607:f8b0:4007:805::100f scholar.l.google.com
+```
+
+启动dnsmasq
+
+```systemctl enable dnsmasq
+systemctl start dnsmasq
+```
+
 ## Intro
 
 [Shadowsocks-libev](http://shadowsocks.org) is a lightweight secured SOCKS5 

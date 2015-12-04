@@ -324,6 +324,7 @@
 		DA4648B51C1168F200B21834 /* verify1.c in Sources */ = {isa = PBXBuildFile; fileRef = DA4647371C1168F200B21834 /* verify1.c */; };
 		DA4648B61C1168F200B21834 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DA4647581C1168F200B21834 /* README.md */; };
 		DA4648B71C1168F200B21834 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = DA4647721C1168F200B21834 /* Makefile */; };
+		DA4648B91C116A7400B21834 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DA4648B81C116A7400B21834 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1489,6 +1490,7 @@
 		DA4647741C1168F200B21834 /* genrpm.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = genrpm.sh; sourceTree = "<group>"; };
 		DA4647781C1168F200B21834 /* shadowsocks-libev */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "shadowsocks-libev"; sourceTree = "<group>"; };
 		DA46477A1C1168F200B21834 /* shadowsocks-libev.spec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shadowsocks-libev.spec"; sourceTree = "<group>"; };
+		DA4648B81C116A7400B21834 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1521,6 +1523,7 @@
 		DA4642151C1168B800B21834 /* shadowsocks-libev */ = {
 			isa = PBXGroup;
 			children = (
+				DA4648B81C116A7400B21834 /* README.md */,
 				DA46421D1C1168F100B21834 /* src */,
 				DA46427F1C1168F100B21834 /* libcork */,
 				DA4643021C1168F100B21834 /* libev */,
@@ -4554,6 +4557,7 @@
 				DA4647A41C1168F200B21834 /* process.c in Sources */,
 				DA4647DB1C1168F200B21834 /* udns_XtoX.c in Sources */,
 				DA4647851C1168F200B21834 /* netutils.c in Sources */,
+				DA4648B91C116A7400B21834 /* README.md in Sources */,
 				DA46482C1C1168F200B21834 /* fe_cmov.c in Sources */,
 				DA46478F1C1168F200B21834 /* error.c in Sources */,
 				DA4647F21C1168F200B21834 /* core_hsalsa20_api.c in Sources */,
