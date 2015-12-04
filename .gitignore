@@ -57,3 +57,5 @@ libsodium/src/libsodium/include/sodium/version.h
 *.tar.bz2
 *.tar.gz
 #
+shadowsocks-libev/shadowsocks-libev.xcodeproj/project.xcworkspace/xcuserdata
+shadowsocks-libev/shadowsocks-libev.xcodeproj/xcuserdata
